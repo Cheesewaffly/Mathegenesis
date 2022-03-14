@@ -1,0 +1,5 @@
+import random
+def polynomialdefiniteintegralgenerator(Integral, upper, lower, question, answer, questionsheet, answersheet):
+    question.append(str("=" + str("".join([specialcases.replace(" 1 ", "").replace(" -1 ", "-").replace("+ ", "+").replace(" x", "x").replace("^1", "").replace("x^0", "").replace("+-", "-") for specialcases in ["+" + plus for plus in [term for term in [" " + str(Integral[power]) + " x^" + str(power) for power in reversed(range(len(Integral)))] if " 0 x" not in term]]])) + " ").replace("=+", "").replace("=-", "-").replace("+ ", "+1 ").replace("- ", "-1 ")), answer.append(str(sum([(1/(n + 1)) * Integral[n] * (upper ** (n + 1)) for n in reversed(range(len(Integral)))]) - sum([(1/(n + 1)) * Integral[n] * (lower ** (n + 1)) for n in reversed(range(len(Integral)))])))
+    with open(questionsheet, "a") as f1, open(answersheet, "a") as f2:
+       f1.write("\\item $\\displaystyle\\int_{" + str(lower) + "}^{" +str(upper) + "}" + question[0][:-1] + "\\, \\, dx=\\cdots$\n"),  f2.write("\\item $\\displaystyle " + str(int(float(answer[0]))) + "$\n")
