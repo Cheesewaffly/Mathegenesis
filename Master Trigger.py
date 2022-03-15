@@ -9,5 +9,5 @@ def generateall(sheet, amount):
 
             PolynomialIntegralGenerator.polynomialintegralgenerator([(random.randint(-20, 20) if _ != 0 else random.randint(1, 20)) for _ in range(random.randint(4, 10))][::-1], [], [], str(sheet[0]) + ".txt", str(sheet[1]) + ".txt")
 
-            PolynomialDefiniteIntegralGenerator.polynomialdefiniteintegralgenerator([(random.randint(-20, 20) if _ != 0 else random.randint(1, 20)) for _ in range(random.randint(3, 6))][::-1], random.randint(1, 5), random.randint(6, 10),[], [],str(sheet[0]) + ".txt", str(sheet[1]) + ".txt")
+            PolynomialDefiniteIntegralGenerator.polynomialdefiniteintegralgenerator([(random.randint(-20, 20) if _ != 0 else random.randint(1, 20)) for _ in range(random.randint(3, 6))][::-1], random.randint(1, 10), random.randint(11, 20),[], [],str(sheet[0]) + ".txt", str(sheet[1]) + ".txt")
 generateall(["Questions", "Answers"], int(input()))
